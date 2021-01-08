@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans bg-gray-100 antialiased min-h-screen h-full">
+  <div class="font-sans bg-gray-100 antialiased min-h-screen h-full text-gray-900">
     <Header />
     <main>
       <Nuxt />
