@@ -31,7 +31,7 @@
         <button type="button" 
                 class="`inline-flex text-sm leading-5 px-6 py-2 tracking-wide
                         rounded-md border transition ease-in-out duration-150 
-                      text-gray-700 hover:border-black hover:text-black`">
+                      text-gray-700 hover:border-black hover:text-black `">
           Invite Team
         </button>
         <button type="button" 
@@ -42,8 +42,7 @@
         </button>
       </div>
     </section>
-
-
+    
   </div>
 </template>
 
