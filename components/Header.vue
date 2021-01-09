@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-white">
-    <nav class="flex items-center justify-between max-w-7xl mx-auto mt-4 px-8">
+  <header class="bg-white border-b border-gray-300">
+    <nav class="flex items-center justify-between max-w-7xl mx-auto mt-4 px-12 flex-wrap">
       <!-- first flex between item -->
       <div class="flex items-center space-x-3">
         <Logo :classes="`h-5`"/>
@@ -45,6 +45,17 @@
         </button>
       </div>
     </nav>
+
+    <nav class="max-w-7xl leading-5 mx-auto mt-4">
+      <ul class="text-sm flex items-center space-x-4 px-12 flex-wrap">
+        <li v-for="(link, i) in links" :key="i"
+            class="pb-3 transition ease-in-out duration-150"
+            :class="`${link === setLink ? 'border-b-2 border-black text-black' : 'border-b-2 border-transparent text-gray-600'}`"
+            @click.prevent="setLink = link">
+          <a href="#" class="tracking-wide">{{ link }}</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
@@ -57,7 +68,8 @@
     data () {
       return {
         src: require('@/assets/images/avatar.jpg'),
-        links: ['Overview', 'Projects', 'Integrations', 'Activity', 'DOmains', 'Usage', 'Settings']
+        links: ['Overview', 'Projects', 'Integrations', 'Activity', 'Domains', 'Usage', 'Settings'],
+        setLink: 'Overview'
       }
     }
   }
