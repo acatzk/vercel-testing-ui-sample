@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-7xl mx-auto">
-    <section class=" px-16 pt-12 pb-24 bg-white flex items-start justify-between border-b border-gray-300">
+  <div>
+    <section class="max-w-7xl mx-auto px-6 pt-12 pb-24 bg-white flex items-start justify-between border-b">
       <div class="flex space-x-8">
         <div class="flex-shrink-0">
           <Avatar :className="`w-24 h-24`" :src="image" alt="avatar"/>
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-2 col-gap-5">
+      <div class="grid grid-cols-2 col-gap-5 px-6">
         <button type="button" 
                 class="`inline-flex text-sm leading-5 px-6 py-2 tracking-wide
                         rounded-md border transition ease-in-out duration-150 
@@ -43,6 +43,38 @@
       </div>
     </section>
     
+    <section class="grid grid-cols-12 px-6">
+      <div class="col-span-7">
+        <h2 class="sr-only">Recent Projects</h2>
+        <ul>
+          <li>
+            <div>
+              <div>
+                <div>
+                  <h3>nuxt-vercel</h3>
+                  <button>Visit</button>
+                </div>
+                <div>
+                  <div aria-label="Production deployment">
+                    <nuxt-link to="/">
+                      <span aria-hidden></span>
+                      <span>vercel.app.com</span>
+                    </nuxt-link>
+                    <span>
+                      Production
+                    </span>
+                    <span>204d</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-5">
+        <h2>Recent Activity</h2>
+      </div>
+    </section>
   </div>
 </template>
 

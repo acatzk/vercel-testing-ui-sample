@@ -1,6 +1,6 @@
 <template>
   <header class="bg-white border-b border-gray-300">
-    <nav class="flex items-center justify-between max-w-7xl mx-auto mt-4 px-16 flex-wrap">
+    <nav class="flex items-center justify-between max-w-7xl mx-auto mt-4 px-6 flex-wrap">
       <!-- first flex between item -->
       <div class="flex items-center space-x-3">
         <Logo :classes="`h-5`"/>
@@ -45,9 +45,9 @@
         </button>
       </div>
     </nav>
-
+  
     <nav class="max-w-7xl leading-5 mx-auto mt-4">
-      <ul class="text-sm flex items-center space-x-4 px-16 flex-wrap">
+      <ul class="text-sm flex items-center space-x-4 px-6 flex-wrap">
         <li v-for="(link, i) in links" :key="i"
             class="pb-3 transition ease-in-out duration-150 hover:text-black"
             :class="`${link === setLink ? 'border-b-2 border-black text-black' : 'border-b-2 border-transparent text-gray-600'}`"
