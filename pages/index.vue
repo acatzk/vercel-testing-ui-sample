@@ -50,7 +50,7 @@
         <h2 class="sr-only">Recent Projects</h2>
         <div class="space-y-12 pb-12">
           <ul class="space-y-12">
-            <li v-for="(project, i) in projects" :key="`${i + project.id}`">
+            <li v-for="(project, i) in projects" :key="i">
               <ProjectCard :project="project"/>
             </li>
           </ul>
@@ -61,8 +61,18 @@
           </div>
         </div>
       </div>
-      <div class="col-span-5">
+      <div class="col-span-5 space-y-8">
         <h2 class="text-sm font-semibold mt-2">Recent Activity</h2>
+        <ul class="divide-y divide-gray-200">
+          <li class="py-2" v-for="r in 32" :key="r">
+            <RecentLog />
+          </li>
+        </ul>
+        <div>
+          <a class="text-sm leading-5 font-bold text-blue-500 hover:underline" href="#">
+            View All Projects
+          </a>
+        </div>
       </div>
     </section>
   </div>
@@ -77,7 +87,8 @@
     },
     components: {
       Avatar: () => import('@/components/Avatar'),
-      ProjectCard: () => import('@/components/ProjectCard')
+      ProjectCard: () => import('@/components/ProjectCard'),
+      RecentLog: () => import('@/components/RecentLog')
     },
     data () {
       return {
@@ -102,7 +113,7 @@
             updated_at: '2d'
           },
           {
-            id: 4,
+            id: 3,
             title: 'nuxt-meetup-design',
             domain: 'meetup.app.com',
             devDomain: 'meetup-ui-redesign-51pzp1m88.now.sh',
@@ -111,7 +122,7 @@
             updated_at: '2d'
           },
           {
-            id: 3,
+            id: 4,
             title: 'vue-coinbase-design',
             domain: 'coinbase.app.com',
             devDomain: 'coinbase-ui-redesign-51pzp1m88.now.sh',
