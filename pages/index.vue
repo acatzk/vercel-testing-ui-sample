@@ -45,36 +45,24 @@
       </div>
     </div>
 
-    <section class="max-w-5xl mx-auto px-6 grid grid-cols-12">
+    <section class="-mt-10 max-w-5xl mx-auto px-6 grid col-gap-20 grid-cols-12">
       <div class="col-span-7">
         <h2 class="sr-only">Recent Projects</h2>
-        <ul>
-          <li>
-            <div>
-              <div>
-                <div>
-                  <h3>nuxt-vercel</h3>
-                  <button>Visit</button>
-                </div>
-                <div>
-                  <div aria-label="Production deployment">
-                    <nuxt-link to="/">
-                      <span aria-hidden></span>
-                      <span>vercel.app.com</span>
-                    </nuxt-link>
-                    <span>
-                      Production
-                    </span>
-                    <span>2</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <div class="space-y-12 pb-12">
+          <ul class="space-y-12">
+            <li v-for="(project, i) in projects" :key="`${i + project.id}`">
+              <ProjectCard :project="project"/>
+            </li>
+          </ul>
+          <div>
+            <a class="text-sm leading-5 font-bold text-blue-500 hover:underline" href="#">
+              View All Projects
+            </a>
+          </div>
+        </div>
       </div>
       <div class="col-span-5">
-        <h2>Recent Activity</h2>
+        <h2 class="text-sm font-semibold mt-2">Recent Activity</h2>
       </div>
     </section>
   </div>
@@ -88,11 +76,77 @@
       }
     },
     components: {
-      Avatar: () => import('@/components/Avatar')
+      Avatar: () => import('@/components/Avatar'),
+      ProjectCard: () => import('@/components/ProjectCard')
     },
     data () {
       return {
-        src: require('@/assets/images/avatar.jpg')
+        src: require('@/assets/images/avatar.jpg'),
+        projects: [
+          {
+            id: 1,
+            title: 'nuxt-vercel-design',
+            domain: 'vercel.app.com',
+            devDomain: 'vercel-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/vercel',
+            created_at: '204d',
+            updated_at: '6d'
+          },
+          {
+            id: 2,
+            title: 'nuxt-resolute-design',
+            domain: 'resolute.app.com',
+            devDomain: 'resolute-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/resolute',
+            created_at: '03d',
+            updated_at: '2d'
+          },
+          {
+            id: 4,
+            title: 'nuxt-meetup-design',
+            domain: 'meetup.app.com',
+            devDomain: 'meetup-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/meetup',
+            created_at: '42d',
+            updated_at: '2d'
+          },
+          {
+            id: 3,
+            title: 'vue-coinbase-design',
+            domain: 'coinbase.app.com',
+            devDomain: 'coinbase-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/coinbase',
+            created_at: '6d',
+            updated_at: '3d'
+          },
+          {
+            id: 5,
+            title: 'vue-discord-design',
+            domain: 'discord.app.com',
+            devDomain: 'discord-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/discord',
+            created_at: '7d',
+            updated_at: '8d'
+          },
+          {
+            id: 6,
+            title: 'vue-workacation-design',
+            domain: 'workacation.app.com',
+            devDomain: 'workacation-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/workacation',
+            created_at: '9d',
+            updated_at: '3d'
+          },
+          {
+            id: 7,
+            title: 'slsu-freedom-wall',
+            domain: 'slsu-freedom-wall.app.com',
+            devDomain: 'slsu-freedom-wall-ui-redesign-51pzp1m88.now.sh',
+            githubRepo: 'acatzk/slsu-freedom-wall',
+            created_at: '2d',
+            updated_at: '5d'
+          },
+        ]
       }
     },
     computed: {
