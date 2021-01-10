@@ -1,5 +1,5 @@
 <template>
-  <img  class="w-8 h-8 rounded-full border border-gray-200 object-cover" 
+  <img  class="rounded-full border border-gray-200 object-cover" 
         :src="image" 
         :alt="alt" 
         :class="`${className}`"/>
@@ -18,7 +18,8 @@
       },
       className: {
         type: String,
-        required: false
+        required: false,
+        default: 'w-8 h-8 '
       }
     },
     computed: {
