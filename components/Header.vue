@@ -3,7 +3,7 @@
     <nav class="max-w-5xl mx-auto flex items-center justify-between mt-4 px-6 flex-wrap">
       <!-- first flex between item -->
       <div class="flex items-center space-x-3">
-        <Logo :classes="`h-5`"/>
+        <Logo :classes="`h-6`"/>
         <span>
           <svg class="h-8 w-8 text-gray-300" viewBox="0 0 32 32" stroke="currentColor" stroke-width="1"><line x1="10" y1="28" x2="22" y2="4"></line></svg>
         </span>
@@ -12,11 +12,11 @@
       <!-- second flex between item -->
       <div class="flex items-center text-sm text-gray-600 space-x-4">
         <div class="flex items-center space-x-5">
-          <button type="button" class="leading-5 border border-gray-200 rounded-md px-2 py-1 focus:outline-none focus:shadow-sm hover:border-black transition ease-in-out duration-150">
+          <button type="button" class="leading-5 border border-gray-200 rounded-md px-3 py-1 focus:outline-none focus:shadow-sm hover:border-black transition ease-in-out duration-150">
             Feedback
           </button>
           <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
-            Blog
+            Changelog
           </nuxt-link>
           <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
             Support
@@ -25,9 +25,6 @@
             Docs
           </nuxt-link>
         </div>
-        <button type="button">
-          <svg class="w-5 h-5" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" d="M6 10a2 2 0 11-4 0 2 2 0 014 0zm6 0a2 2 0 11-4 0 2 2 0 014 0zm4 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
-        </button>
         <button type="button" class="flex-shrink-0">
           <Avatar :src="src" :alt="`avatar`"/>
         </button>
