@@ -19,13 +19,13 @@
       <button @click="toggle = false" class="cursor-default fixed block inset-0 w-full h-full focus:outline-none"></button>
       <div v-show="toggle" class="absolute bg-white shadow-lg w-56 rounded-md overflow-hidden divide-y divide-gray-200">
         <div class="py-2">
-          <div class="pt-3 px-4 pb-3 leading-5 uppercase tracking-wide text-gray-500 text-xs">
+          <div class="pt-3 px-4 pb-3 leading-5 uppercase tracking-wide text-gray-600 text-xs">
             Personal Account
           </div>
           <ul>
             <li class="px-4 py-4">
               <div class="flex items-center justify-between space-x-4">
-                <a href="#" class="flex items-center space-x-3 text-sm text-gray-500 transition ease-in-out duration-150 hover:text-black" @click="toggle = false">
+                <a href="#" class="flex items-center space-x-3 text-sm text-gray-600 transition ease-in-out duration-150 hover:text-black" @click="toggle = false">
                   <Avatar :src="image" :alt="`avatar`" :className="`w-6 h-6`" />
                   <span>Joshua Galit</span>
                 </a>
@@ -39,10 +39,10 @@
           </ul>
         </div>
         <div class="py-2">
-          <a href="#" class="py-2 px-4 flex items-center justify-between text-sm leading-5 text-gray-500 transition ease-in-out duration-150 hover:text-black" @click="toggle = false">
+          <a href="#" class="py-3 px-4 flex items-center justify-between text-sm leading-5 text-gray-600 transition ease-in-out duration-150 hover:text-black" @click="toggle = false">
             <span>Create Team</span>
             <span>
-              <svg class="h-4 w-4" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+              <svg class="h-5 w-5" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" preserveAspectRatio="xMidYMid meet"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
             </span>
           </a>
         </div>
@@ -58,7 +58,7 @@
     },
     data () {
       return {
-        src: require('@/assets/images/avatar.jpg'),
+        src: 'https://vercel.com/api/www/avatar/b6157ae57b5655cf0e3390913e459186988a22e5?s=204',
         toggle: false
       }
     },

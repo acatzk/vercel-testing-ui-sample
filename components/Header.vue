@@ -56,7 +56,7 @@
     },
     data () {
       return {
-        src: require('@/assets/images/avatar.jpg'),
+        src: 'https://vercel.com/api/www/avatar/b6157ae57b5655cf0e3390913e459186988a22e5?s=204',
         links: ['Overview', 'Projects', 'Integrations', 'Activity', 'Domains', 'Usage', 'Settings'],
         setLink: 'Overview'
       }
