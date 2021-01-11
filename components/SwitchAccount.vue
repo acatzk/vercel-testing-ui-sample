@@ -7,7 +7,7 @@
         </span>
         <span>Joshua Galit</span>
       </nuxt-link>
-      <span>
+      <span class="hidden sm:block">
         <button @click.prevent="toggle = !toggle" 
                 :class="toggle ? 'text-gray-700 border border-gray-100 bg-gray-100' : 'text-gray-400 border bg-transparent border-transparent'"
                 class="focus:outline-none border-transparent hover:border-gray-200 hover:bg-gray-100 rounded transition ease-in-out duration-150">

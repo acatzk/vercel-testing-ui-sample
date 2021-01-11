@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class=" bg-white border-b border-gray-200">
-      <div class="max-w-5xl mx-auto px-6 pt-12 pb-24 flex items-center justify-between">
+      <div class="max-w-5xl mx-auto px-6 pt-12 pb-24 flex items-center justify-between flex-wrap">
         <div class="flex space-x-8">
           <div class="flex-shrink-0">
             <Avatar :className="`w-24 h-24`" :src="image" alt="avatar"/>
@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-2 col-gap-5">
+        <div class="grid grid-cols-2 col-gap-5 pt-6 pl-16 sm:pt-0 sm:pl-0">
           <button type="button" 
                   class="`inline-flex text-sm leading-5 px-6 py-2 tracking-wide
                           rounded-md border transition ease-in-out duration-150 
@@ -33,7 +33,7 @@
     </div>
 
     <section class="-mt-10 max-w-5xl mx-auto px-6 grid col-gap-20 grid-cols-12">
-      <div class="col-span-7">
+      <div class="col-start-1 col-end-7 md:col-span-7">
         <h2 class="sr-only">Recent Projects</h2>
         <div class="space-y-12 pb-12">
           <ul class="space-y-12">
@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-5 space-y-8">
+      <div class="col-start-1 col-end-7 md:col-span-5 space-y-8">
         <h2 class="text-sm font-semibold mt-2">Recent Activity</h2>
         <ul class="divide-y divide-gray-200">
           <li class="py-2" v-for="r in 32" :key="r">

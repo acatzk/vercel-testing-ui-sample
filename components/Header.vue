@@ -9,30 +9,39 @@
         </span>
         <SwitchAccount />
       </div>
+
       <!-- second flex between item -->
       <div class="flex items-center text-sm text-gray-600 space-x-4">
-        <div class="flex items-center space-x-5">
-          <button type="button" class="leading-5 border border-gray-200 rounded-md px-3 py-1 focus:outline-none focus:shadow-sm hover:border-black transition ease-in-out duration-150">
-            Feedback
-          </button>
-          <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
-            Changelog
-          </nuxt-link>
-          <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
-            Support
-          </nuxt-link>
-          <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
-            Docs
-          </nuxt-link>
+        <div class="hidden sm:block">
+          <div class="flex items-center space-x-5">
+            <button type="button" class="leading-5 border border-gray-200 rounded-md px-3 py-1 focus:outline-none focus:shadow-sm hover:border-black transition ease-in-out duration-150">
+              Feedback
+            </button>
+            <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
+              Changelog
+            </nuxt-link>
+            <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
+              Support
+            </nuxt-link>
+            <nuxt-link to="/" class="leading-5 hover:text-black transition ease-in-out duration-150">
+              Docs
+            </nuxt-link>
+            <button type="button" class="flex-shrink-0">
+              <Avatar :src="src" :alt="`avatar`"/>
+            </button>
+          </div>
         </div>
-        <button type="button" class="flex-shrink-0">
-          <Avatar :src="src" :alt="`avatar`"/>
-        </button>
+        <div class="block sm:hidden">
+          <button>
+            <svg class="w-8 h-8 text-gray-700" stroke="currentColor" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio"><path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 8h16M4 16h16"></path></svg>
+          </button>
+        </div>
       </div>
+
     </nav>
   
     <nav class="max-w-5xl leading-5 mx-auto mt-4">
-      <ul class="text-sm flex items-center space-x-4 px-6 flex-wrap">
+      <ul class="text-sm flex items-center space-x-4 px-6 overflow-y-auto">
         <li v-for="(link, i) in links" :key="i"
             class="pb-3 transition ease-in-out duration-150 hover:text-black"
             :class="`${link === setLink ? 'border-b-2 border-black text-black' : 'border-b-2 border-transparent text-gray-600'}`"
